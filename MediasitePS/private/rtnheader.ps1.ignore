@@ -1,0 +1,26 @@
+#Returns header for API
+function rtnheader(){
+    if($auth.MediasiteApplicationTicket.length -gt 0){
+        write-verbose "using ApplicationTicket"
+        return @{
+            "Accept"="text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8";
+            "sfapikey"=$sfapikey;"Accept-Encoding"="gzip,deflate,sdch";
+            "Accept-Language"="en-US,en;q=0.8";
+            "Mediasite-Application-Ticket"=$auth.MediasiteApplicationTicket
+        }
+    }
+    return @{
+        "Accept"="text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8";
+        "sfapikey"=$sfapikey;
+        "Accept-Encoding"="gzip,deflate,sdch";
+        "Accept-Language"="en-US,en;q=0.8";
+        "Authorization"=$authorization
+    }
+  }
+  
+  function rtnuri(){
+    return $uri
+  }
+  
+  $uri = $systemUri + "/api/v1/"
+  
