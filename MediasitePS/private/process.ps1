@@ -156,7 +156,6 @@ Process
             Write-Verbose "rawout"
             return $rtndata
         }
-        write-host "full?:$($tmpjson.select)"
         if($odataidfound){
         Write-Verbose "odataidfound"
         #return ,,(addmethods -obj1 $rtndata -noaddmethod $noaddmethod)
