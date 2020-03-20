@@ -10,8 +10,9 @@ It gets the metadata for the Mediasite Api from /api/v1/$metadata on the Mediasi
 open powershell and cd to the folder you want to clone it to
 ```
 > git clone https://github.com/wunde005/MediasitePS
-# Load module and follow prompts:
-> Import-Module .\MediasitePS\MediasitePS\mediasiteps
+```
+Load module and follow prompts:
+```> Import-Module .\MediasitePS\MediasitePS\mediasiteps
 auth_file:
 WARNING: Auth file not submitted.  Either re-import with the auth file specified or follow the prompts to create a new
 one.
