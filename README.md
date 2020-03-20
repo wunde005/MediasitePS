@@ -133,16 +133,16 @@ UpdatePermissions ScriptMethod System.Object UpdatePermissions();
 PS C:\devel\mediasiteps> $f[0].Parent()
 
 
-odata.metadata                        : https://mediasite.csom.umn.edu/Mediasite/Api/v1/$metadata#Folders/@Element
-odata.id                              : https://mediasite.csom.umn.edu/Mediasite/Api/v1/Folders('9caa20f3ab1a4563a303f6
+odata.metadata                        : https://<your server>/Mediasite/Api/v1/$metadata#Folders/@Element
+odata.id                              : https://<your server>/Mediasite/Api/v1/Folders('9caa20f3ab1a4563a303f6
                                         104113ae2714')
-Presentations@odata.navigationLinkUrl : https://mediasite.csom.umn.edu/Mediasite/Api/v1/Folders('9caa20f3ab1a4563a303f6
+Presentations@odata.navigationLinkUrl : https://<your server>/Mediasite/Api/v1/Folders('9caa20f3ab1a4563a303f6
                                         104113ae2714')/Presentations
-#UpdatePermissions                    : @{target=https://mediasite.csom.umn.edu/Mediasite/Api/v1/Folders('9caa20f3ab1a4
+#UpdatePermissions                    : @{target=https://<your server>/Mediasite/Api/v1/Folders('9caa20f3ab1a4
                                         563a303f6104113ae2714')/UpdatePermissions}
-#UpdateOwner                          : @{target=https://mediasite.csom.umn.edu/Mediasite/Api/v1/Folders('9caa20f3ab1a4
+#UpdateOwner                          : @{target=https://<your server>/Mediasite/Api/v1/Folders('9caa20f3ab1a4
                                         563a303f6104113ae2714')/UpdateOwner}
-#DeleteFolder                         : @{target=https://mediasite.csom.umn.edu/Mediasite/Api/v1/Folders('9caa20f3ab1a4
+#DeleteFolder                         : @{target=https://<your server>/Mediasite/Api/v1/Folders('9caa20f3ab1a4
                                         563a303f6104113ae2714')/DeleteFolder}
 Id                                    : 9caa20f3ab1a4563a303f6104113ae2714
 Name                                  : Mediasite Users
@@ -165,8 +165,8 @@ PS C:\devel\mediasiteps> $nf =Folders -id "f5c5f11ae3b34f0593a793767f19a89014"
 PS C:\devel\mediasiteps> $nf.DeleteFolder()
 
 
-odata.metadata : https://mediasite.csom.umn.edu/Mediasite/Api/v1/$metadata#Jobs/@Element
-odata.id       : https://mediasite.csom.umn.edu/Mediasite/Api/v1/Jobs('81b20d5c-adf6-4c93-864c-f010d66b98ac')
+odata.metadata : https://<your server>/Mediasite/Api/v1/$metadata#Jobs/@Element
+odata.id       : https://<your server>/Mediasite/Api/v1/Jobs('81b20d5c-adf6-4c93-864c-f010d66b98ac')
 Id             : 81b20d5c-adf6-4c93-864c-f010d66b98ac
 Status         : Queued
 StatusMessage  :
@@ -233,13 +233,13 @@ Required data is passed as a hashtable
 PS C:\devel\mediasiteps> Folders -Post -data @{"Name"="New Folder";"ParentFolderId"="572ac9bbd7954bdcae91421ac88f0b2d14"}
 
 
-odata.metadata                        : https://mediasite.csom.umn.edu/Mediasite/Api/v1/$metadata#Folders/@Element
-odata.id                              : https://mediasite.csom.umn.edu/Mediasite/Api/v1/Folders('f5c5f11ae3b34f0593a793767f19a89014')
-Presentations@odata.navigationLinkUrl : https://mediasite.csom.umn.edu/Mediasite/Api/v1/Folders('f5c5f11ae3b34f0593a793767f19a89014')/Presentations
-#UpdatePermissions                    : @{target=https://mediasite.csom.umn.edu/Mediasite/Api/v1/Folders('f5c5f11ae3b34f0593a793767f19a89014')/UpdatePermissions 
+odata.metadata                        : https://<your server>/Mediasite/Api/v1/$metadata#Folders/@Element
+odata.id                              : https://<your server>/Mediasite/Api/v1/Folders('f5c5f11ae3b34f0593a793767f19a89014')
+Presentations@odata.navigationLinkUrl : https://<your server>/Mediasite/Api/v1/Folders('f5c5f11ae3b34f0593a793767f19a89014')/Presentations
+#UpdatePermissions                    : @{target=https://<your server>/Mediasite/Api/v1/Folders('f5c5f11ae3b34f0593a793767f19a89014')/UpdatePermissions 
                                         }
-#UpdateOwner                          : @{target=https://mediasite.csom.umn.edu/Mediasite/Api/v1/Folders('f5c5f11ae3b34f0593a793767f19a89014')/UpdateOwner}
-#DeleteFolder                         : @{target=https://mediasite.csom.umn.edu/Mediasite/Api/v1/Folders('f5c5f11ae3b34f0593a793767f19a89014')/DeleteFolder}     
+#UpdateOwner                          : @{target=https://<your server>/Mediasite/Api/v1/Folders('f5c5f11ae3b34f0593a793767f19a89014')/UpdateOwner}
+#DeleteFolder                         : @{target=https://<your server>/Mediasite/Api/v1/Folders('f5c5f11ae3b34f0593a793767f19a89014')/DeleteFolder}     
 Id                                    : f5c5f11ae3b34f0593a793767f19a89014
 Name                                  : New Folder
 Owner                                 : MediasiteAdmin
