@@ -30,6 +30,10 @@ username to use for ticket (leave blank to use current username): MediasiteAdmin
 finding profile id for MediasiteAdmin
 write authfile?(Y/n): y
 auth file: testauth.xml <enter a filename for the auth info>
+
+<check it is working>
+> Home
+
 ------------
 Next time you load it use:
 > Import-Module .\MediasitePS\MediasitePS\mediasiteps -ArgumentList .\testauth.xml
