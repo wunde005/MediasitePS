@@ -12,7 +12,8 @@ open powershell and cd to the folder you want to clone it to
 > git clone https://github.com/wunde005/MediasitePS
 ```
 Load module and follow prompts:
-```> Import-Module .\MediasitePS\MediasitePS\mediasiteps
+```
+> Import-Module .\MediasitePS\MediasitePS\mediasiteps
 auth_file:
 WARNING: Auth file not submitted.  Either re-import with the auth file specified or follow the prompts to create a new
 one.
@@ -32,8 +33,9 @@ username to use for ticket (leave blank to use current username): MediasiteAdmin
 finding profile id for MediasiteAdmin
 write authfile?(Y/n): y
 auth file: testauth.xml <enter a filename for the auth info>
-
-#check it is working
+```
+check it is working
+```
 > Home
 
 odata.metadata                         : https://<your server>/Mediasite/Api/v1/$metadata#Home/@Element
@@ -51,8 +53,9 @@ SiteBuildNumber                        : 3914
 ....
 ....
 
-------------
-#Next time you load it use:
+```
+Next time you load it use:
+```
 > Import-Module .\MediasitePS\MediasitePS\mediasiteps -ArgumentList .\testauth.xml
 ```
 
