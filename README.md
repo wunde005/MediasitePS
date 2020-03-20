@@ -10,6 +10,7 @@ It gets the metadata for the Mediasite Api from /api/v1/$metadata on the Mediasi
 open powershell and cd to the folder you want to clone it to
 ```
 > git clone https://github.com/wunde005/MediasitePS
+# Load module and follow prompts:
 > Import-Module .\MediasitePS\MediasitePS\mediasiteps
 auth_file:
 WARNING: Auth file not submitted.  Either re-import with the auth file specified or follow the prompts to create a new
@@ -31,11 +32,26 @@ finding profile id for MediasiteAdmin
 write authfile?(Y/n): y
 auth file: testauth.xml <enter a filename for the auth info>
 
-<check it is working>
+#check it is working
 > Home
 
+odata.metadata                         : https://<your server>/Mediasite/Api/v1/$metadata#Home/@Element
+odata.id                               : https://<your server>/Mediasite/Api/v1/Home
+NowPlaying@odata.navigationLinkUrl     : https://<your server>/Mediasite/Api/v1/Home('7.2.3.0')/NowPlaying
+RecentlyViewed@odata.navigationLinkUrl : https://<your server>/Mediasite/Api/v1/Home('7.2.3.0')/RecentlyViewed
+#ChangePassword                        : @{target=https://<your server>/Mediasite/Api/v1/Home('7.2.3.0')/Chang
+                                         ePassword}
+ApiVersion                             : 7.2.3.0
+ApiPublishedDate                       : 2020-03-20T16:25:12.485241Z
+SiteName                               : Mediasite
+SiteDescription                        :
+SiteVersion                            : 7.2.2
+SiteBuildNumber                        : 3914
+....
+....
+
 ------------
-Next time you load it use:
+#Next time you load it use:
 > Import-Module .\MediasitePS\MediasitePS\mediasiteps -ArgumentList .\testauth.xml
 ```
 
