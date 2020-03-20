@@ -8,7 +8,7 @@ It gets the metadata for the Mediasite Api from /api/v1/$metadata on the Mediasi
 ## Get started
 
 open powershell and cd to the folder you want to clone it to
-
+```
 > git clone https://github.com/wunde005/MediasitePS
 > Import-Module .\MediasitePS\MediasitePS\mediasiteps
 auth_file:
@@ -37,6 +37,7 @@ auth file: testauth.xml <enter a filename for the auth info>
 ------------
 Next time you load it use:
 > Import-Module .\MediasitePS\MediasitePS\mediasiteps -ArgumentList .\testauth.xml
+```
 
 ### Here are a few examples of the route and the corresponding powershell command:  
      
