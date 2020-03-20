@@ -5,6 +5,35 @@ Mediasite Powershell Module
 The module is generated using: ModuleCreator.ps1  
 It gets the metadata for the Mediasite Api from /api/v1/$metadata on the Mediasite server and then generates functions for each of the available Resources (eg. Recorders, Presentations and Home).  Each resource supports the GET, POST, PUT, PATCH and DELETE verbs for routes that support it (GET is the default if not specified).  Sub routes are handled by arguments passed to the resource function.  For example Folders supports the arguments UpdatePermissions, UpdateOwner and DeleteFolder.  
 
+## Get started
+
+open powershell and cd to the folder you want to clone it to
+
+> git clone https://github.com/wunde005/MediasitePS
+> Import-Module .\MediasitePS\MediasitePS\mediasiteps
+auth_file:
+WARNING: Auth file not submitted.  Either re-import with the auth file specified or follow the prompts to create a new
+one.
+Example import with auth file: import-module MediasitePS -ArgumentList .\tmp\auth.xml
+
+mediasite uri(https://<servername>/mediasite): https://<yourserver>/mediasite
+
+Info on the API can be found here: https://<yourserver>/mediasite/api/v1/$metadata#top
+
+Go here to create a API key: https://<yourserver>/mediasite/api/Docs/ApiKeyRegistration.aspx
+
+Enter API Key: <your api key>
+What is your username?: <your username>
+What is your password?: <your password>
+get Application Ticket?(Y/n): y
+username to use for ticket (leave blank to use current username): MediasiteAdmin
+finding profile id for MediasiteAdmin
+write authfile?(Y/n): y
+auth file: testauth.xml <enter a filename for the auth info>
+------------
+Next time you load it use:
+> Import-Module .\MediasitePS\MediasitePS\mediasiteps -ArgumentList .\testauth.xml
+
 ### Here are a few examples of the route and the corresponding powershell command:  
      
 Description:&nbsp;Lists presentations related to this one  
